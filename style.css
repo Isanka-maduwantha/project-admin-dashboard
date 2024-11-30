@@ -264,6 +264,7 @@ aside.sidebar{
     }
     .sidebar-profile{
         display: flex;
+        padding: 20px 10px ;
 
         .profile-detail{
             .name{
