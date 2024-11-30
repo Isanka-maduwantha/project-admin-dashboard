@@ -125,7 +125,7 @@ main{
             display: grid;
             
             
-            gap: 10px;
+            
             .box-price{
                 font-size: 3rem;
             }
@@ -153,11 +153,7 @@ main{
 
 
         }
-        .update,.income,.revenue,.transaction,.sales,.return{
-
-            
-          
-        }
+     
         .box{
             box-shadow: 1px 1px 1px rgb(224, 224, 224);
             border-radius: var(--dbradius);
@@ -259,4 +255,11 @@ h4>span.dot{
 .line-through{
     text-decoration: line-through;
 }
-
+/* style hr */
+hr{
+    height: 1px;
+    width: 90%;
+    border: none;
+    background-color: var(--mwhite);
+    margin: 1px auto;
+}
