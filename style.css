@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 7fr;
+    grid-template-areas: 
+        "side header"
+        "side main"
+    ;
+}
+header{
+    grid-area: header;
+    border: 1px solid #000;
+}
+main{
+    grid-area: main;
+    border: 1px solid #000;
+}
+aside{
+    grid-area: side;
+    border: 1px solid #000;
+}
