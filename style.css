@@ -239,3 +239,12 @@ h4>span.dot{
     top:-5px
     
 }
+/* Add styles to 40% in update box and line through in week after that*/
+.box-content-precent{
+    font-weight: bold;
+
+}
+.line-through{
+    text-decoration: line-through;
+}
+
