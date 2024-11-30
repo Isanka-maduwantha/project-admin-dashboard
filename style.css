@@ -163,6 +163,7 @@ main{
         .transaction{
             grid-column: span 2;
             grid-row: 3/5;
+          
             ul{
                 display: grid;
                 
@@ -225,4 +226,16 @@ aside.sidebar{
 li{
     list-style-type:none;
 }
-/* style of childs */
+/* style the dot */
+h4{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+h4>span.dot{
+    font-size: 1.5rem;
+    align-self: center;
+    position: relative;
+    top:-5px
+    
+}
