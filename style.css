@@ -73,7 +73,7 @@ main{
 
     .dashboard{
         display: grid;
-        grid-template-columns: repeat(auto-fit,minmax(120px,1fr));
+        grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
         grid-template-rows: 50px 1fr 2fr 2fr;
         grid-auto-rows: 1ft;
         gap:20px;
@@ -163,6 +163,26 @@ main{
         .transaction{
             grid-column: span 2;
             grid-row: 3/5;
+            ul{
+                display: grid;
+                
+            }
+            ul li{
+                margin: 10px 0;
+                display: flex;
+                justify-content: space-between;
+                padding: var(--dpadding) 0;
+                .transaction-item-content{
+                    width: 90%;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    
+                    
+                }
+                .transaction-item-content >div:nth-child(even){
+                    justify-self: end;
+                }
+            }
         }
         .revenue{
             grid-column: 3/-1;
