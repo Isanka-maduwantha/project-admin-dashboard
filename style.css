@@ -8,7 +8,8 @@
     --fontmain-family:sans-serif;
     --dbradius:20px;
     --dgap:10px;
-    --main-color:blueviolet;
+    --main-color:rgb(163, 93, 228);
+    
 
 }
 body{
@@ -20,6 +21,8 @@ body{
         "side header"
         "side main"
     ;
+    /* border-radius: var(--dbradius);
+    border: 1px solid var(--mwhite); */
 }
 header{
     grid-area: header;
@@ -223,6 +226,7 @@ aside.sidebar{
     box-shadow: 1px 0px 3px 1px var(--mwhite);
     display: grid;
     grid-template-rows: 70px 1fr 70px;
+    padding-bottom: var(--dpadding);
     .logo{
         display: flex;
         font-size: 2rem;
@@ -265,6 +269,7 @@ aside.sidebar{
     .sidebar-profile{
         display: flex;
         padding: 20px 10px ;
+        
 
         .profile-detail{
             .name{
