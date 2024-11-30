@@ -8,6 +8,7 @@
     --fontmain-family:sans-serif;
     --dbradius:20px;
     --dgap:10px;
+    --main-color:blueviolet;
 
 }
 body{
@@ -73,8 +74,8 @@ main{
     .dashboard{
         display: grid;
         grid-template-columns: repeat(auto-fit,minmax(120px,1fr));
-        grid-template-rows: 10% auto 1fr 1fr;
-        grid-auto-rows: 100px;
+        grid-template-rows: 50px 1fr 2fr 2fr;
+        grid-auto-rows: 1ft;
         gap:20px;
         padding: 20px;
         border-right: 1px solid var(--mwhite);
@@ -106,12 +107,10 @@ main{
             grid-column: 1/-1;
             /* grid-row: span 2; */
             display: grid;
-            grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+            grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
             gap:var(--dgap);
 
-            div{
-                
-            }
+           
         }
         .dashboard-overview-boxes > div{
             box-shadow: 1px 1px 1px rgb(224, 224, 224);
@@ -119,7 +118,18 @@ main{
             border: 1px solid var(--mwhite);
             padding: var(--dpadding);
             display: grid;
+            
+            
             gap: 10px;
+            .box-price{
+                font-size: 3rem;
+            }
+            .box-price::before{
+                content: "$";
+                position: relative;
+                font-size: 1.5rem;
+                top: -20px;
+            }
 
             .box-content{
                 font-size: 1.2rem;
@@ -129,6 +139,7 @@ main{
                     font-size: 0.7rem;
                     margin-top: var(--dpadding);
                     display: block;
+                    
                 }
             }
             .box-bottom{
@@ -137,23 +148,40 @@ main{
 
 
         }
+        .update,.income,.revenue,.transaction,.sales,.return{
+
+            
+          
+        }
         .box{
-            border: 1px solid #000;
+            box-shadow: 1px 1px 1px rgb(224, 224, 224);
+            border-radius: var(--dbradius);
+            border: 1px solid var(--mwhite);
+            padding: var(--dpadding);
+           
         }
         .transaction{
-            grid-column: 1/3;
+            grid-column: span 2;
             grid-row: 3/5;
         }
         .revenue{
             grid-column: 3/-1;
             grid-row: 3/4;
-            border: 1px solid #000;
+            box-shadow: 1px 1px 1px rgb(224, 224, 224);
+            border-radius: var(--dbradius);
+            border: 1px solid var(--mwhite);
+            padding: var(--dpadding);
+           
 
         }
         .sales{
             grid-row: 4/5;
             grid-column: 3/-1;
-            border: 1px solid #000;
+            box-shadow: 1px 1px 1px rgb(224, 224, 224);
+            border-radius: var(--dbradius);
+            border: 1px solid var(--mwhite);
+            padding: var(--dpadding);
+           
         }
         
 
@@ -174,5 +202,7 @@ aside.sidebar{
         
     }
 }
-
+li{
+    list-style-type:none;
+}
 /* style of childs */
