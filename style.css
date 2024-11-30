@@ -106,11 +106,11 @@ main{
                 border-radius:var(--dbradius) ;
                 border: 1px solid var(--mwhite);
             }
-            /* background-color: red; */
+            
         }
         .dashboard-overview-boxes{
             grid-column: 1/-1;
-            /* grid-row: span 2; */
+            
             display: grid;
             grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
             gap:var(--dgap);
@@ -121,7 +121,7 @@ main{
             box-shadow: 1px 1px 1px rgb(224, 224, 224);
             border-radius: var(--dbradius);
             border: 1px solid var(--mwhite);
-            padding: var(--dpadding);
+            padding: calc(var(--dpadding)*2);
             display: grid;
             
             
@@ -162,7 +162,7 @@ main{
             box-shadow: 1px 1px 1px rgb(224, 224, 224);
             border-radius: var(--dbradius);
             border: 1px solid var(--mwhite);
-            padding: var(--dpadding);
+            padding: calc(var(--dpadding)*2);
            
         }
         .transaction{
