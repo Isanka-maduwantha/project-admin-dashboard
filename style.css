@@ -178,6 +178,7 @@ main{
                 display: flex;
                 justify-content: space-between;
                 padding: var(--dpadding) 0;
+                gap: 10px;
                 .transaction-item-content{
                     width: 90%;
                     display: grid;
@@ -187,6 +188,12 @@ main{
                 }
                 .transaction-item-content >div:nth-child(even){
                     justify-self: end;
+                }
+                img{
+                    background-color: #eee;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
                 }
             }
         }
