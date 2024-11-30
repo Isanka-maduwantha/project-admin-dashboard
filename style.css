@@ -220,16 +220,15 @@ main{
 aside.sidebar{
     grid-area: side;
     border: 1px solid #000;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    ul{
-        display: grid;
-        gap: 10px;
-
-        
+    display: grid;
+    grid-template-rows: 70px 1fr 70px;
+    .sidebar-lists{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        gap: max(10vh,200px);
     }
+   
 }
 li{
     list-style-type:none;
