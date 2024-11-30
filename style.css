@@ -23,11 +23,16 @@ body{
 }
 header{
     grid-area: header;
-    border: 1px solid #000;
+    position: sticky;
+    top: 0;
+    
+    border-bottom: 1px solid var(--mwhite);
+    box-shadow: 0 1px 10px var(--mwhite);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 10px;
+    background-color: #fff;
 
     .functions{
         display: flex;
