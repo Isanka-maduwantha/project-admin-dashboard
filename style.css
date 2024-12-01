@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    line-height: 1.5;
     --dborder:none;
     --dpadding:10px;
     --mwhite:#eee;
@@ -37,12 +38,12 @@ header{
     padding: 0 10px;
     background-color: #fff;
 
-    .role select.roles{
+    .role select{
         border: var(--dborder);
         padding: var(--dpadding);
         background-color: #fff0;
         font-size: 1.5rem;
-
+/* change uouline to none when focused */
         &:focus{
             outline: none;
         }
@@ -105,16 +106,19 @@ main{
             display:flex;
             justify-content: space-between;
             
-            /* grid-auto-flow: column; */
+            
             gap: var(--dpadding);
             font-family: var(--fontmain-family);
-            h1{
+            /* Styles the dashboard header with paragraph next to it */
+            .heading-title h1{
                 font-size: 1.4rem;
-            }
-            h1+p{
 
-                font-size: 0.7rem;
+                +p{
+                    font-size: 0.7rem;
+                    margin-top: 5px;
+                }
             }
+            
             .heading-date{
                 height: fit-content;
                 padding: var(--dpadding);
@@ -132,46 +136,50 @@ main{
 
             .update{
                 background-color: var(--main-color);
-    color: var(--mwhite);
-            }
-           
-        }
-        .dashboard-overview-boxes > div{
-            box-shadow: 1px 1px 1px rgb(224, 224, 224);
-            border-radius: var(--dbradius);
-            border: 1px solid var(--mwhite);
-            padding: calc(var(--dpadding)*2);
-            display: grid;
-            
-            
-            
-            .box-price{
-                font-size: 3rem;
-            }
-            .box-price::before{
-                content: "$";
-                position: relative;
-                font-size: 1.5rem;
-                top: -20px;
-            }
+                color: var(--mwhite);
 
-            .box-content{
-                font-size: 1.2rem;
-
-                font-family: var(--fontmain-family);
-                .box-content-date{
-                    font-size: 0.7rem;
-                    margin-top: var(--dpadding);
-                    display: block;
-                    
+                .box-content .box-content-precent{
+                    color: var(--secound-color);
                 }
             }
-            .box-bottom{
-                align-self: self-end;
-            }
-
-
+           
+            div.box{
+                
+                display: grid;
+                position: relative;
+                /* the values in dollers */
+                .box-price{
+                    font-size: 3rem;
+                    /* $ symbol before icome value */
+                    &::before{
+                        content: "$";
+                        position: relative;
+                        font-size: 1.5rem;
+                        top: -20px;
+                    }
+                }
+                
+    
+                .box-content{
+                    font-size: 1.3rem;
+                    margin: var(--dpadding) 0;
+    
+                    font-family: var(--fontmain-family);
+                    .box-content-date{
+                        font-size: 0.7rem;
+                        margin-top: var(--dpadding);
+                        display: block;
+                        
+                    }
+                }
+                .box-bottom{
+                    align-self: self-end;
+                }
+    
+    
         }
+
+       }
      
         .box{
             box-shadow: 1px 1px 1px rgb(224, 224, 224);
@@ -186,29 +194,29 @@ main{
           
             ul{
                 display: grid;
-                
-            }
-            ul li{
-                margin: 10px 0;
-                display: flex;
-                justify-content: space-between;
-                padding: var(--dpadding) 0;
-                gap: 10px;
-                .transaction-item-content{
-                    width: 90%;
-                    display: grid;
-                    grid-template-columns: 1fr 1fr;
+                li{
+                    margin: 10px 0;
+                    display: flex;
+                    justify-content: space-between;
+                    padding: var(--dpadding) 0;
+                    gap: 10px;
+                    img{
+                        background-color: #eee;
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                    }
+                    .transaction-item-content{
+                        width: 90%;
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        
+                        
+                    }
+                    .transaction-item-content >div:nth-child(even){
+                        justify-self: end;
+                    }
                     
-                    
-                }
-                .transaction-item-content >div:nth-child(even){
-                    justify-self: end;
-                }
-                img{
-                    background-color: #eee;
-                    width: 50px;
-                    height: 50px;
-                    border-radius: 50%;
                 }
             }
         }
