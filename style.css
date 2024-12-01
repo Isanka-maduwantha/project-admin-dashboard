@@ -8,25 +8,25 @@
     --fontmain-family:sans-serif;
     --dbradius:20px;
     --dgap:10px;
-    --main-color:rgb(163, 93, 228);
+    --main-color:rgb(9, 37, 21);
+    --secound-color:rgb(60, 174, 42);
     
 
 }
 body{
 
     display: grid;
-    grid-template-columns: 200px 5fr;
+    grid-template-columns: minmax(200px,1fr) 5fr;
     grid-template-rows: 70px 7fr;
     grid-template-areas: 
         "side header"
         "side main"
     ;
-    /* border-radius: var(--dbradius);
-    border: 1px solid var(--mwhite); */
+    
 }
 header{
     grid-area: header;
-    position: sticky;
+    /* position: sticky; */
     top: 0;
     
     border-bottom: 1px solid var(--mwhite);
@@ -37,42 +37,54 @@ header{
     padding: 0 10px;
     background-color: #fff;
 
+    .role select.roles{
+        border: var(--dborder);
+        padding: var(--dpadding);
+        background-color: #fff0;
+        font-size: 1.5rem;
+
+        &:focus{
+            outline: none;
+        }
+    }
     .functions{
         display: flex;
         justify-content: space-between;
         gap: 50px;
         align-items: center;
+
+        input[type="search"]{
+            outline: none;
+            width: minmax(100px,10vw);
+        }
+        input[type="search"]{
+            appearance: none;
+            padding: var(--dpadding);
+            border: 1px solid var(--mwhite);
+            border-radius: 30px;
+            
+        }
+        .main-functions{
+            display: flex;
+            gap: 10px;
+
+            button{
+                appearance: none;
+                border-radius: 30px;
+                border: 1px solid #c1c1c1;
+                background-color: #f5f5f5;
+                padding: var(--dpadding) 15px;
+            }
+        }
     }
-}
-.role select{
-    border: var(--dborder);
-    padding: var(--dpadding);
-    background-color: #fff0;
-    font-size: 1.5rem;
-}
-select:focus,input:focus{
-    outline: none;
-}
-input[type="search"]{
-    width: minmax(100px,10vw);
-}
-input[type="search"],button{
-    appearance: none;
-    padding: var(--dpadding);
-    border: 1px solid var(--mwhite);
-    border-radius: 30px;
+   
     
-}
-.main-functions{
-    display: flex;
-    gap: 10px;
-}
-.functions .main-functions button{
+
+   
     
-    border: 1px solid #c1c1c1;
-    background-color: #f5f5f5;
-    padding: var(--dpadding) 15px;
+ 
 }
+
 main{
     grid-area: main;
     /* border: 1px solid #000; */
@@ -118,6 +130,10 @@ main{
             grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
             gap:var(--dgap);
 
+            .update{
+                background-color: var(--main-color);
+    color: var(--mwhite);
+            }
            
         }
         .dashboard-overview-boxes > div{
@@ -222,11 +238,13 @@ main{
 }
 aside.sidebar{
     grid-area: side;
-    border: 1px solid var(--mwhite);
+    
     box-shadow: 1px 0px 3px 1px var(--mwhite);
     display: grid;
     grid-template-rows: 70px 1fr 70px;
     padding-bottom: var(--dpadding);
+    background-color: var(--main-color);
+    color: var(--mwhite);
     .logo{
         display: flex;
         font-size: 2rem;
