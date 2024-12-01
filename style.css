@@ -1,6 +1,10 @@
 *, *::before, *::after {
     box-sizing: border-box;
   }
+*::selection{
+  background-color: #00772b;
+  color: #fff;
+}
 * {
   margin: 0;
   padding: 0;
@@ -494,10 +498,6 @@ main {
       .piechart-explain::first-letter{
         font-size: 120%;
       }
-      .piechart-explain::selection{
-        background-color: var(--secound-color);
-        color: var(--mwhite);
-      }
    }
   }
 }
@@ -597,8 +597,4 @@ li {
 
 }
 
-/* Add styles to 40% in update box and line through in week after that*/
 
-
-
-/* frofile image */
