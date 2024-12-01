@@ -295,6 +295,28 @@ main {
       padding: var(--dpadding);
     }
   }
+
+  .extra{
+    box-shadow: 1px 1px 1px rgb(224, 224, 224);
+   
+    border: 1px solid var(--mwhite);
+    padding: calc(var(--dpadding) * 2);
+    .box {
+      h4{
+        margin-bottom: var(--dgap);
+        width: 100%;
+        font-size: 120%;
+
+      }
+      hr{
+        height: 1px;
+        width: 90%;
+        border: none;
+        background-color: var(--mwhite);
+        margin: 1px auto;
+      }
+   }
+  }
 }
 aside.sidebar {
   grid-area: side;
