@@ -424,10 +424,15 @@ main {
 
   .extra{
     box-shadow: 1px 1px 1px rgb(224, 224, 224);
-    
+    min-height: 50vh;
     border: 1px solid var(--mwhite);
+    border-radius: 20px;
     padding: calc(var(--dpadding) * 2);
+    display: grid;
+    grid-template-rows: 100px 1fr 1fr;
+    gap: 10px;
     .box {
+      
       h4{
         margin-bottom: var(--dgap);
         width: 100%;
@@ -443,15 +448,14 @@ main {
       }
    }
    .piechart-container{
-    margin-top: 10vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 50px;
     align-items: center;
-    /* background-color: var(--mwhite); */
-    height: 30%;
-    border-radius: var(--dbradius);
-    box-shadow: 1px 1px 2px 1px var(--mwhite);
+    
       .piechart{
+        padding: 0 10px;
         width: clamp(50px,250px,10vw);
         height: clamp(50px,250px,10vw);
         border-radius: 50%;
@@ -468,7 +472,7 @@ main {
           }
         }
         .expense-label{
-          left: -20px;
+          left: -10px;
           top: -30px;
 
           &::after{
@@ -483,6 +487,16 @@ main {
           
           
         }
+      }
+      .piechart-explain{
+        font-size: 1.2rem;
+      }
+      .piechart-explain::first-letter{
+        font-size: 120%;
+      }
+      .piechart-explain::selection{
+        background-color: var(--secound-color);
+        color: var(--mwhite);
       }
    }
   }
