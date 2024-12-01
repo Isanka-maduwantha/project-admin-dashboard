@@ -317,7 +317,7 @@ main {
         div{
           /* border: 1px solid #000; */
           display: grid;
-          grid-template-columns: 1fr 1fr;
+          grid-template-columns: repeat(2,minmax(20px,1fr));
           grid-template-rows: repeat(5,1fr);
 
           .income{
@@ -447,12 +447,42 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    /* background-color: var(--mwhite); */
+    height: 30%;
+    border-radius: var(--dbradius);
+    box-shadow: 1px 1px 2px 1px var(--mwhite);
       .piechart{
         width: clamp(50px,250px,10vw);
         height: clamp(50px,250px,10vw);
         border-radius: 50%;
         background:#eee ;
         background-image: conic-gradient(var(--secound-color) 60deg,var(--secound-color) 220deg,var(--main-color) 221deg ,var(--main-color) 0deg );
+        font-weight: bold;
+        position: relative;
+        .income-label{
+          right: 0;
+          bottom: -30px;
+
+          &::after{
+            content:" 70%"
+          }
+        }
+        .expense-label{
+          left: -20px;
+          top: -30px;
+
+          &::after{
+            content:" 30%"
+          }
+        }
+        div{
+          position: absolute;
+          letter-spacing: 2px;
+          text-shadow: 1px 2px 5p #000;
+          font-family: cursive;
+          
+          
+        }
       }
    }
   }
