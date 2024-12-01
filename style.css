@@ -544,7 +544,10 @@ aside.sidebar {
     h3 + ul {
       display: flex;
       flex-direction: column;
+      .current-part{
+        border-left: 10px solid var(--secound-color);
 
+      }
       li {
         padding: 20px 10px;
         font-size: 1.2rem;
