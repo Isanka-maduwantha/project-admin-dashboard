@@ -9,8 +9,9 @@
   --fontmain-family: sans-serif;
   --dbradius: 20px;
   --dgap: 10px;
-  --main-color: rgb(9, 37, 21);
-  --secound-color: rgb(60, 174, 42);
+  /* --main-color: rgb(9, 37, 21); */
+  --main-color:#003a16;
+  --secound-color: #00f65b;
 }
 body {
   display: grid;
