@@ -26,6 +26,9 @@ body {
     "side main";
     font-family: var(--roboto);
 }
+button{
+  cursor: pointer;
+}
 p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
     font-family: var(--poppins);
@@ -258,10 +261,19 @@ main {
             width: 90%;
             display: grid;
             grid-template-columns: 1fr 1fr;
+
+            .completed{
+              font-weight: 500;
+              color: var(--main-color);
+            }
+            .item-content-date,.grey{
+              color: grey;
+            }
           }
           .transaction-item-content > div:nth-child(even) {
             justify-self: end;
           }
+         
         }
       }
     }
