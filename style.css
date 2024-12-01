@@ -63,27 +63,50 @@ header {
     justify-content: space-between;
     gap: 50px;
     align-items: center;
+    .searchbar{
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      gap: 10px;
+      img{
+        width: 30px;
+        height: auto;
+        position: relative;
+        left: -50px;
+        top: 4px;
+      }
+      input[type="search"] {
+        outline: none;
+        width: 100%;
+        width: minmax(100px, 10vw);
+      }
+      input[type="search"] {
+        appearance: none;
+        padding: var(--dpadding);
+        border: 1px solid var(--mwhite);
+        border-radius: 30px;
+      }
+    }
 
-    input[type="search"] {
-      outline: none;
-      width: minmax(100px, 10vw);
-    }
-    input[type="search"] {
-      appearance: none;
-      padding: var(--dpadding);
-      border: 1px solid var(--mwhite);
-      border-radius: 30px;
-    }
+  
     .main-functions {
       display: flex;
       gap: 10px;
 
       button {
         appearance: none;
-        border-radius: 30px;
+        border-radius: 50px;
         border: 1px solid #c1c1c1;
         background-color: #f5f5f5;
-        padding: var(--dpadding) 15px;
+        padding: var(--dpadding);
+        display: flex;
+        img{
+          width: 20px;
+          height: 20px;
+          background-color: transparent;
+        }
       }
     }
   }
@@ -229,6 +252,7 @@ main {
             width: 50px;
             height: 50px;
             border-radius: 50%;
+            padding: 5px;
           }
           .transaction-item-content {
             width: 90%;
@@ -275,6 +299,13 @@ aside.sidebar {
     text-align: center;
     justify-content: center;
     align-items: center;
+    gap: 10px;
+
+    img{
+      width: 30px;
+      height: auto;
+      margin-bottom: 10px;
+    }
   }
   .sidebar-lists {
     display: grid;
@@ -286,7 +317,9 @@ aside.sidebar {
     h3 {
       padding: 20px 10px 0;
       margin-bottom: -10px;
-      font-weight: normal;
+      font-weight: 400;
+      font-family: var(--roboto);
+
     }
     h3 + ul {
       display: flex;
@@ -295,6 +328,22 @@ aside.sidebar {
       li {
         padding: 20px 10px;
         font-size: 1.2rem;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: var(--dpadding);
+        border-left: 10px solid var(--main-color);
+        cursor: pointer;
+       
+        img{
+          width: 30px;
+          height: 30px;
+          
+          
+        }
+      }
+      li:hover{
+        border-left:10px solid var(--secound-color);
       }
     }
     .sidebar-menu {
@@ -325,6 +374,7 @@ aside.sidebar {
 }
 li {
   list-style-type: none;
+
 }
 
 /* Add styles to 40% in update box and line through in week after that*/
