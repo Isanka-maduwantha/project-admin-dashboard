@@ -1,7 +1,10 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  
   line-height: 1.5;
   --dborder: none;
   --dpadding: 10px;
@@ -9,9 +12,10 @@
   --fontmain-family: sans-serif;
   --dbradius: 20px;
   --dgap: 10px;
-  /* --main-color: rgb(9, 37, 21); */
   --main-color:#003a16;
   --secound-color: #00f65b;
+  --poppins:  "Poppins", sans-serif;
+  --roboto:  "Roboto", sans-serif;
 }
 body {
   display: grid;
@@ -20,7 +24,17 @@ body {
   grid-template-areas:
     "side header"
     "side main";
+    font-family: var(--roboto);
 }
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+    font-family: var(--poppins);
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
+  input, button, textarea, select {
+    font: inherit;
+  }
 header {
   grid-area: header;
   /* position: sticky; */
