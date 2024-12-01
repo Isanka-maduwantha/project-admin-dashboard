@@ -199,7 +199,7 @@ main {
         }
 
         .box-content {
-          font-size: 1.3rem;
+          font-size: clamp(1.2rem,10vw,30px);
           margin: var(--dpadding) 0;
 
           font-family: var(--fontmain-family);
