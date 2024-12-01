@@ -424,7 +424,7 @@ main {
 
   .extra{
     box-shadow: 1px 1px 1px rgb(224, 224, 224);
-   
+    
     border: 1px solid var(--mwhite);
     padding: calc(var(--dpadding) * 2);
     .box {
@@ -440,6 +440,19 @@ main {
         border: none;
         background-color: var(--mwhite);
         margin: 1px auto;
+      }
+   }
+   .piechart-container{
+    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+      .piechart{
+        width: clamp(50px,250px,10vw);
+        height: clamp(50px,250px,10vw);
+        border-radius: 50%;
+        background:#eee ;
+        background-image: conic-gradient(var(--secound-color) 60deg,var(--secound-color) 220deg,var(--main-color) 221deg ,var(--main-color) 0deg );
       }
    }
   }
